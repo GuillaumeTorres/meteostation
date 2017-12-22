@@ -19,19 +19,19 @@ app.set('view engine', 'jade');
 setInterval(() => {
     const temperatureData = {
         type: 'temperature',
-        value: Math.random() * 2 + 22,
+        value: (Math.random() * 2 + 22).toFixed(2),
         date: new Date()
     }
 
     const pressureData = {
         type: 'pressure',
-        value: Math.random() + 1,
+        value: (Math.random() + 1).toFixed(2),
         date: new Date()
     }
 
     const luminosityData = {
         type: 'luminosity',
-        value: Math.random() * 5 + 55,
+        value: (Math.random() * 5 + 55).toFixed(2),
         date: new Date()
     }
 
