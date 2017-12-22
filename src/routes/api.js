@@ -9,10 +9,10 @@ router.get('/temperature', (req, res) => {
         })
 })
 
-router.get('/pressure', (req, res) => {
-    Parameter.find({'type': 'pressure'}).sort({ date : -1 }).limit(1)
-        .then(pressure => {
-            res.send(pressure)
+router.get('/humidity', (req, res) => {
+    Parameter.find({'type': 'humidity'}).sort({ date : -1 }).limit(1)
+        .then(humidity => {
+            res.send(humidity)
         })
 })
 

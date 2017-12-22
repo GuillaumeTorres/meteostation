@@ -23,9 +23,9 @@ setInterval(() => {
         date: new Date()
     }
 
-    const pressureData = {
-        type: 'pressure',
-        value: (Math.random() + 1).toFixed(2),
+    const humidityData = {
+        type: 'humidity',
+        value: (Math.random() * 2 + 10).toFixed(2),
         date: new Date()
     }
 
@@ -36,11 +36,11 @@ setInterval(() => {
     }
 
     const temperature = new Parameter(temperatureData)
-    const pressure = new Parameter(pressureData)
+    const humidity = new Parameter(humidityData)
     const luminosity = new Parameter(luminosityData)
 
     temperature.save()
-    pressure.save()
+    humidity.save()
     luminosity.save()
 
 }, 5000)
